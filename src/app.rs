@@ -13,7 +13,7 @@ pub fn App(cx: Scope) -> impl IntoView {
         // injects a stylesheet into the document <head>
         // id=leptos means cargo-leptos will hot-reload this stylesheet
         <Stylesheet id="leptos" href="/pkg/leptos_start.css"/>
-
+        
         // sets the document title
         <Title text="Welcome to Leptos"/>
 
@@ -28,15 +28,25 @@ pub fn App(cx: Scope) -> impl IntoView {
     }
 }
 
-/// Renders the home page of your application.
 #[component]
-fn HomePage(cx: Scope) -> impl IntoView {
-    // Creates a reactive value to update the button
-    let (count, set_count) = create_signal(cx, 0);
-    let on_click = move |_| set_count.update(|count| *count += 1);
+fn HomePage(cx: Scope) -> impl IntoView {   
 
     view! { cx,
-        <h1>"Welcome to Leptos!"</h1>
-        <button on:click=on_click>"Click Me: " {count}</button>
+         <section>
+            <h1>"Hey! I'm Jakub and this is my website"</h1>
+            <img src="./assets/profile.png" alt="do zrobienia"/><br></br>
+            "I'm a StarCraft 2 player for CSO Esports and currently I'm learning Rust with Leptos"<br></br>
+            "and I'm planning to learn Dart and Flutter to become Full Stack Programmer" <br></br>
+            "I don't have any degree I'm learning for myself only"
+            <aside>
+            <div id="email"></div>
+            </aside>
+            <div class="Socialetc"> 
+                <div class="Discord">"Discord"</div>
+                <div class="Twitter">"Twitter"</div>
+                <div class="Twitch">"Twitch"</div>
+            </div>
+        </section>
+        
     }
 }

@@ -1,4 +1,48 @@
+$fa-font-path: "../webfonts";
+
+// importing core styling file
+@import "./fontawesome/scss/fontawesome.scss";
+
+// our project needs Classic Solid, Brands, and Sharp Solid 
+@import "./fontawesome/scss/solid.scss";
+@import "./fontawesome/scss/brands.scss";
+
+
+
 body {
-	font-family: sans-serif;
+	font-family: Arial, Helvetica, sans-serif;
 	text-align: center;
+	font-size: 2.7ch;
+	background-color: #1c1c1c;
+	color: #ababab;
+}
+main{
+	background-color: #1c1c1c;
+	color: #ababab;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+section{
+	height: 80vh;
+	width: 40%;
+	background-color: #3d3d3d;
+	border-radius: 10%;
+	
+}
+.Discord{
+	@include fa-icon-brands($fa-var-discord);
+
+}
+
+.Twitter{
+	@include fa-icon-brands($fa-var-twitter);
+
+
+}
+.Twitch{
+	@include fa-icon-brands($fa-var-twitch);
+
+	
 }
